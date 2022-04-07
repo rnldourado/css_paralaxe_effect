@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Paralax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="assets/stars.png" alt="stars" id="stars">
+        <img src="assets/moon.png" alt="moon" id="moon">
+        <img src="assets/mountains_behind.png" id="mountains_behind">
+        <img src="assets/mountains_front.png" alt="mountains_front" id="mountains_front">
+        <img src="assets/image 19.png" alt="" id="jake">
+        <!-- <h2 id="text">Moon Light</h2> -->
+        <a href="#sec" id="btn">Explore</a>
+    </section>
+    <div class="sec" id="sec">
+        <h2>Paralax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facilis dolores in, autem magnam amet
+            praesentium nihil eaque deleniti alias commodi vitae temporibus beatae aspernatur asperiores consequatur
+            ipsa accusamus. Saepe odio accusantium inventore? Excepturi praesentium debitis soluta ullam ex aspernatur
+            consequuntur perspiciatis laboriosam reprehenderit dolorem provident consectetur, voluptate consequatur
+            laudantium fugiat placeat suscipit, aperiam sit ad omnis laborum quasi illum dolor cupiditate? Veniam odio
+            deleniti ipsa. Placeat eligendi magni aperiam libero quaerat error ut, explicabo temporibus fugit minima
+            consequuntur esse nisi quam illo eaque perspiciatis fugiat deserunt? Corporis, error similique porro
+            sapiente mollitia excepturi accusamus nesciunt impedit nulla sed unde omnis! Sint dolorum sunt aliquam,
+            officia voluptatum magnam. Aliquid quia, fuga voluptatem beatae consequuntur eos optio corrupti fugiat non?
+            Quae dicta reiciendis dolore! Enim dolorum non, incidunt laborum autem molestias unde at, eos fugit ipsum
+            repellat dolores ipsam? Asperiores voluptas expedita mollitia optio laudantium beatae voluptatem a, rerum
+            dolor, provident nisi saepe illo deserunt suscipit deleniti eum. Numquam consectetur consequatur, nisi ipsa
+            corporis deleniti at totam ea debitis beatae vero laudantium repudiandae blanditiis facilis deserunt porro
+            rerum provident recusandae accusamus quos quasi? Ut autem nisi laborum nam aspernatur porro enim explicabo
+            odio quam, tempora, quia repellendus animi ab assumenda ratione cum similique? Facilis, ipsum quisquam, quae
+            repellat facere exercitationem fuga id sint illo eligendi ducimus deserunt minima totam beatae officiis
+            quidem voluptate dignissimos aperiam ipsa atque placeat blanditiis esse? Perspiciatis quia animi enim quos
+            magnam officia porro corrupti, harum voluptas odit, facere quo explicabo qui? Eaque iure doloremque a
+            quibusdam esse mollitia odit similique nesciunt reprehenderit ipsum saepe et quis eligendi libero pariatur
+            deleniti molestias, odio voluptates quidem inventore laudantium quo molestiae. Nisi, a dolores nobis
+            quisquam reiciendis magnam. Voluptas enim at doloremque suscipit non. Eaque suscipit, alias error ipsa
+            asperiores accusamus nam hic aut accusantium deserunt sint dicta, natus inventore mollitia provident sunt?
+            Repellat, dolores quas nostrum dolore temporibus necessitatibus cumque fugiat saepe soluta ea eaque incidunt
+            corporis laboriosam voluptate deserunt sed, magni sapiente, corrupti ullam. Voluptatum ratione eligendi
+            aspernatur necessitatibus illum nisi cupiditate suscipit fugit, modi vitae nemo hic dignissimos. Assumenda
+            ab quae quidem voluptas sint commodi quasi ipsa corporis nulla animi asperiores ex a, vel omnis nobis vitae
+            quia eaque et minus accusantium eligendi fugit provident! A, expedita optio! Consectetur quaerat itaque
+            autem distinctio voluptas dolor quidem omnis laboriosam ut sequi nulla, dolorem natus quo numquam libero
+            quod est neque, voluptatum perspiciatis asperiores! Voluptatibus est recusandae culpa.<br><br></p>
+    </div>
+
+    <script>
+        let stars = document.getElementById("stars")
+        let moon = document.getElementById("moon")
+        let mountains_behind = document.getElementById("mountains_behind")
+        let mountains_front = document.getElementById("mountains_front")
+        let btn = document.getElementById("btn")
+        let jake = document.getElementById("jake")
+        let sec = document.getElementById("sec")
+        let header = document.getElementById("header")
+
+        window.addEventListener("scroll", () => {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            // jake.style.marginRight = value * 4 + 'px';
+            // jake.style.marginTop = value * 1.5 + 'px';
+            jake.style.marginTop = value * (-0.8) + 'px';
+            jake.style.left = value * 4 + 'px';
+
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px'
+
+        })
+    </script>
+</body>
+
+</html>
